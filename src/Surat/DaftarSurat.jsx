@@ -16,9 +16,12 @@ class DaftarSurat extends Component {
   }
  
   render() {
-    console.log(this.props)
+    console.log(this.state.surat);
     return (
       <>
+        <Link to={"/"}>
+          <button className="btn btn-success mt-5 ml-5">Menu</button>
+        </Link>
         <div className="flex m-8 flex-col justify-center items-center">
           <h1 className="flex m-8 text-5xl justify-center items-center">
             Daftar Surah
@@ -27,8 +30,11 @@ class DaftarSurat extends Component {
             {this.state.surat.map((surat) => {
               return (
                 <>
-                  <Link to={`/Surah/${surat.nomor}`} >
-                    <div className="card w-96 bg-emerald-300 shadow-xl " key={surat.id}>
+                  <Link to={`/Surah/${surat.nomor}`}>
+                    <div
+                      className="card w-96 bg-emerald-300 shadow-xl "
+                      key={surat.id}
+                    >
                       <div className="card-body text-gray-800 ">
                         <h2 className="card-title"></h2>
                         <h2>
